@@ -35,10 +35,9 @@ sudo apt update
 
 ## Step 5: Install Suricata and jq
 ```bash
-sudo apt install suricata jq
+sudo apt install suricata 
 ```
 - `suricata`: The intrusion detection system.
-- `jq`: A command-line JSON processor (useful for Suricata log processing).
 
 ---
 
@@ -70,9 +69,7 @@ sudo nano /etc/suricata/suricata.yaml
 
 ## Step 9: Update Suricata Configuration
 ```yaml
-HOME_NET: "<UBUNTU_IP>"
-EXTERNAL_NET: "any"
-
+ HOME_NET: "[10.0.0.0/8]" <- change your ip 
 stats:
   enabled: yes
 
